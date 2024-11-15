@@ -1,5 +1,9 @@
 # Phishing URL Masking Tool
 
+## Disclaimer
+
+This tool is intended for **educational and research purposes only**. The creator, **Cykamra**, does not take responsibility for any misuse of this tool. Phishing is **illegal and unethical**. Always act responsibly and ensure your activities are lawful. The use of this tool to deceive or harm others is strongly discouraged.
+
 ## Overview
 This tool allows you to craft a disguised URL that hides the original phishing link. It works by shortening the provided URL and masking it with a legitimate domain, making it look more convincing for social engineering purposes. This is just a simple automation tool for generating these disguised URLs.
 
@@ -19,4 +23,4 @@ This tool allows you to craft a disguised URL that hides the original phishing l
    ```bash
    git clone https://github.com/Cykamra/Phishploit.git
    cd phishploit 
-# Phishploit
+
