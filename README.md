@@ -22,5 +22,6 @@ This tool allows you to craft a disguised URL that hides the original phishing l
 1. Clone the repository:
    ```bash
    git clone https://github.com/Cykamra/Phishploit.git
-   cd phishploit 
+   cd Phishploit 
+   python3 phishploit.py 
 
