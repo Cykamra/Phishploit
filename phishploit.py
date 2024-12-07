@@ -26,14 +26,17 @@ def validate_url_format(url):
 # Input phishing URL
 phishing_url = input(f"{YELLOW}Please enter the Phishing URL (starting with http or https): {RESET}")
 validate_url_format(phishing_url)
+print(f"{GREEN}Modifying the provided URL to a shortened version for better disguise...{RESET}")
 
 # Shorten the URL
-print(f"{GREEN}Modifying the provided URL to a shortened version for better disguise...{RESET}")
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
-request = urllib.request.Request(f"https://is.gd/create.php?format=simple&url={phishing_url}", headers=headers)
-with urllib.request.urlopen(request) as response:
-    shortened_url = response.read().decode().replace("https://", "")
-
+try:
+    request = urllib.request.Request(f"https://is.gd/create.php?format=simple&url={phishing_url}", headers=headers)
+    with urllib.request.urlopen(request) as response:
+         shortened_url = response.read().decode().replace("https://", "")     
+except:
+    print(f'{RED}[!] please make sure you have internet connection{RESET}')
+    exit(1) 
 # Input mask domain
 print(f"\n{CYAN}--- Masking Domain ---{RESET}")
 mask_domain = input(f"{YELLOW}Enter a legitimate domain to mask the Phishing URL (starting with http or https), e.g., https://google.com or http://anything.org: {RESET}")
